@@ -1,0 +1,16 @@
+{ 
+  "name": "Floob #3",
+  "description": "This floob floobs around a floob in a purpley pink floob",
+  "image": "https://ipfs.io/ipfs/QmeUAnEMeqdYZkRqmNHK7V1Xi8vYqbBLFjS7J4gkqUwCZe",
+  "animation_url": "https://ipfs.io/ipfs/QmccJXjtBY5oepjfitp3L9kSV2Z5jT3FsoJd3a9guvFPyV",
+  "properties": {
+    "mainColor": "#a55eea", 
+    "lightColor1": [0.1, 0.1, 1.0], 
+    "lightColor2": [0.5, 0.1, 0.5], 
+    "radius": 8,
+    "tubeThickness": 1,
+    "innerWinds": 8,
+    "outerWinds": 3,
+    "rotation": [0.1, 0.1, 0.1]
+  }
+}

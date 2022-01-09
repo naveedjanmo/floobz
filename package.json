@@ -1,0 +1,31 @@
+{
+  "name": "planetary",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "glslCanvas": "^0.1.7",
+    "i": "^0.3.7",
+    "next": "^11.1.3",
+    "npm": "^8.3.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-inlinesvg": "^2.3.0",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "three": "^0.132.2",
+    "web3": "^1.5.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

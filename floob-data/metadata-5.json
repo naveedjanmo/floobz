@@ -1,0 +1,16 @@
+{ 
+  "name": "Floob #5",
+  "description": "This floob floobs around a floob in a goldy silvery floob",
+  "image": "https://ipfs.io/ipfs/QmPTGTqRvFkUgVSWKxFPBTTZh7vHyvhxeEr1WR4XPpRs6V",
+  "animation_url": "https://ipfs.io/ipfs/QmeJb1eXHrwNH6EVtYfCmkryKwshStt5QYj9eRnin5QFru",
+  "properties": {
+    "mainColor": "#f9ca24", 
+    "lightColor1": [1.0, 0.55, 0.15], 
+    "lightColor2": [1.0, 0.87, 0.37], 
+    "radius": 8,
+    "tubeThickness": 1.8,
+    "innerWinds": 4,
+    "outerWinds": 10,
+    "rotation": [0.1, 0.6, 0.6]
+  }
+}

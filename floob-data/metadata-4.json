@@ -1,0 +1,16 @@
+{ 
+  "name": "Floob #4",
+  "description": "This floob floobs around a floob in a pinky floob",
+  "image": "https://ipfs.io/ipfs/QmQgXQYFnWEJNX1MTAcBSfLoS2wnNg445eQE6BJSTTPc5v",
+  "animation_url": "https://ipfs.io/ipfs/QmUJUSX5iYexrHrD1pBAp3hNV6CAW7zc1zrqw2QNBBiahH",
+  "properties": {
+    "mainColor": "#ED75A0", 
+    "lightColor1": [0.55, 0.25, 0.60], 
+    "lightColor2": [1.0,	0.0,	0.0], 
+    "radius": 8,
+    "tubeThickness": 1.3,
+    "innerWinds": 4,
+    "outerWinds": 7,
+    "rotation": [0.05, 0.3, 0.3]
+  }
+}
