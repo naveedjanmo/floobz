@@ -19,7 +19,7 @@ function Planet({ metadata, opensea }) {
   if (typeof document === "object") {
     document.documentElement.style.setProperty("--main-color", metadata.properties.mainColor)
   }
-git
+
   let forSaleNotice = (
     <p>↳ Not for sale</p>
   )
