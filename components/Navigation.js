@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 import { useRouter } from 'next/router'
 
 import { useEffect, useState } from 'react'
@@ -30,14 +32,22 @@ const Navigation = function ({ total }) {
     <nav>
       <Link href={prevUrl}>
         <a className="leftarrow">
-          <img src="/leftarrow.svg" className="arrow"></img>
+          <Image
+          src="/leftarrow.svg"
+          alt="left facing arrow"
+          className="arrow"
+          />
         </a>
       </Link>
       <span>0{id}/0{total}</span>
       <Link href={nextUrl}>
-        <a className="rightarrow">
-          <img src="/rightarrow.svg" className="arrow"></img>
-        </a>
+      <a className="righarrow">
+          <Image
+          src="/rightarrow.svg"
+          alt="right facing arrow"
+          className="arrow"
+          />
+      </a> 
       </Link>
     </nav>
   )

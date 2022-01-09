@@ -10,7 +10,7 @@ import Universe from '../components/Universe'
 import EthName from '../components/EthName'
 import Modal from '../components/Modal'
 
-function Planet({ metadata, opensea }) {
+function Floob({ metadata, opensea }) {
   const router = useRouter()
   let { id } = router.query
   id = parseInt(id)
@@ -110,4 +110,4 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default Planet
+export default Floob
