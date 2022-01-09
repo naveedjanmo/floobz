@@ -3,11 +3,8 @@ import Head from 'next/head'
 
 import { web3, contract, contractAddress } from '../lib/web3'
 
-import { useState, useEffect, useContext } from 'react'
-
 import Navigation from '../components/Navigation'
 import Universe from '../components/Universe'
-
 import EthName from '../components/EthName'
 import Modal from '../components/Modal'
 
