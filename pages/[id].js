@@ -10,8 +10,6 @@ import Universe from '../components/Universe'
 
 import EthName from '../components/EthName'
 import Modal from '../components/Modal'
-import WaveRight from '../components/WaveRight'
-import WaveLeft from '../components/WaveLeft'
 
 function Planet({ metadata, opensea }) {
   const router = useRouter()
