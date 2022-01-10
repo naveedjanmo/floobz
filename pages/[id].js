@@ -20,7 +20,7 @@ function Floob({ metadata, opensea }) {
   }
 
   let forSaleNotice = (
-    <p className="left-p">↳ Currenty for sale on Opensea for 0.2 ETH by 0x784ef8…b848</p>
+    <p className="left-p">↳ Currenty for sale on OpenSea for 0.2 ETH by 0x784ef8…b848</p>
   )
 
   // let forSaleNotice = (
