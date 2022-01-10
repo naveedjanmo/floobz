@@ -33,6 +33,8 @@ const Navigation = function ({ total }) {
       <Link href={prevUrl}>
         <a className="leftarrow">
           <Image
+          width="12px"
+          height="12px"
           src="/leftarrow.svg"
           alt="left facing arrow"
           className="arrow"
@@ -43,6 +45,8 @@ const Navigation = function ({ total }) {
       <Link href={nextUrl}>
       <a className="righarrow">
           <Image
+          width="12px"
+          height="12px"
           src="/rightarrow.svg"
           alt="right facing arrow"
           className="arrow"
