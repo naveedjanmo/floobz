@@ -161,6 +161,11 @@ div.loading {
 div.loading {
   display: block;
   text-align: center;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a {
