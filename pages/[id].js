@@ -19,22 +19,29 @@ function Floob({ metadata, opensea }) {
     document.documentElement.style.setProperty("--main-color", metadata.properties.mainColor)
   }
 
-  let forSaleNotice = (
-    <p className="left-p">↳ Currenty for sale on Opensea for 0.2 ETH by 0x784ef8…b848</p>
-  )
-
   // let forSaleNotice = (
-  //   <p>↳ Not for sale</p>
+  //   <p className="left-p">↳ Currenty for sale on Opensea for 0.2 ETH by 0x784ef8…b848</p>
   // )
 
-  // if (opensea.orders.length > 0) {
-  //   const price = web3.utils.fromWei(opensea.orders[0].base_price, "ether")
-  //   const address = opensea.orders[0].maker.address
+  let forSaleNotice = (
+    <p>↳ Not for sale</p>
+  )
 
-  //   forSaleNotice = (
-  //     <p className="left-p">↳ Currenty for sale on Opensea for {price} ETH by <EthName address={address} /></p>
-  //   )
-  // }
+  if (opensea) {
+    if (opensea.orders.length > 0) {
+      const price = web3.utils.fromWei(opensea.orders[0].base_price, "ether")
+      const address = opensea.orders[0].maker.address
+  
+      forSaleNotice = (
+        <p className="left-p">↳ Currenty for sale on Opensea for {price} ETH by <EthName address={address} /></p>
+      )
+    }
+  } else {
+    let forSaleNotice = (
+        <p className="left-p">↳ Currenty for sale on Opensea for 0.2 ETH by 0x784ef8…b848</p>
+      )
+  }
+
 
   let openSeaLink = `https://testnets.opensea.io/assets/${contractAddress}/${id}`
 
