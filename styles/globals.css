@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Bandeins Strange;
-  src: url("../public/bandeins-strange-variable.ttf");
+  src: url("../public/bandeins-strange-variable.woff");
 }
 
 @keyframes text-throb {
