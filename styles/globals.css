@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap");
 
 @font-face {
-  font-family: Bandeins Strange;
+  font-family: 'Bandeins Strange';'
   src: url("/bandeins-strange-variable.ttf");
 }
 
@@ -56,7 +56,7 @@
 }
 
 body {
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -91,7 +91,7 @@ header {
 }
 
 h1 {
-  font-family: Bandeins Strange;
+  font-family: 'Bandeins Strange';
 
   font-size: 32px;
 }
@@ -100,7 +100,7 @@ header .word {
   flex: 1;
   width: 400px;
 
-  font-family: Bandeins Strange;
+  font-family: 'Bandeins Strange';
   font-size: 48px;
   /* font-variation-settings: "wght" 600, "wdth" 400; */
   line-height: 40px;
