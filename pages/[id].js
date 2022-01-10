@@ -34,8 +34,6 @@ function Floob({ metadata, opensea }) {
     }
   }
 
-  
-
   let openSeaLink = `https://testnets.opensea.io/assets/${contractAddress}/${id}`
 
   const [showModal, setShowModal] = useState(false)
