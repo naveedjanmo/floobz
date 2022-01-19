@@ -157,12 +157,6 @@ nav a:hover {
   background-color: #00000010;
 }
 
-/* colour converter here: https://codepen.io/sosuke/pen/Pjoqqp */
-/* nav a:hover > .arrow {
-  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(89deg) brightness(102%)
-    contrast(100%);
-} */
-
 nav span {
   display: flex;
   flex: 1;
