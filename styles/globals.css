@@ -19,40 +19,6 @@
   }
 }
 
-@keyframes dot-throb {
-  0% {
-    top: 20%;
-  }
-  100% {
-    top: 40%;
-  }
-}
-
-.wave-left {
-  position: fixed;
-  top: 50%;
-  left: 0px;
-
-  width: 10%;
-  transform: rotate(90deg);
-}
-
-.wave-right {
-  position: fixed;
-  top: 50%;
-  right: 0px;
-
-  width: 10%;
-  transform: rotate(90deg);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* animation: dot-throb infinite 2s ease-in-out;
-  animation-direction: alternate; */
-}
-
 :root {
   --background-color: #f1f1f1;
   --panel-color: #363636;
@@ -114,10 +80,6 @@ header .word {
   animation: text-throb infinite 1s ease-in-out;
   animation-direction: alternate;
 }
-
-/* header .word:hover {
-  font-variation-settings: "wght" 600, "wdth" 800;
-} */
 
 div.universe {
   position: absolute;
@@ -356,17 +318,6 @@ div.modal a:hover {
   line-height: 150%;
 }
 
-/* @media (max-width: 800px) {
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  section {
-    width: 240px;
-  }
-} */
-
 @media (max-width: 640px) {
   @keyframes text-throb {
     0% {
@@ -394,9 +345,6 @@ div.modal a:hover {
   section.right {
     position: static;
     width: 95%;
-
-    /* margin-left: 16px; */
-    /* margin-right: 16px; */
   }
 
   .button {
@@ -440,43 +388,3 @@ div.modal a:hover {
     width: 90%;
   }
 }
-
-/* @media (max-width: 640px) {
-  main {
-    margin: 16px;
-
-    display: grid;
-
-    height: 100vh;
-    width: 100vw;
-
-    grid-template-areas: "header nav" "universe universe" "section section";
-  }
-
-  header,
-  nav,
-  div.loading,
-  div.universe,
-  section {
-    position: static;
-    width: 100%;
-  }
-
-  header {
-    grid-area: header;
-  }
-
-  nav,
-  div.loading {
-    grid-area: nav;
-  }
-
-  div.universe {
-    grid-area: universe;
-    height: 75vw;
-  }
-
-  section {
-    grid-area: section;
-  }
-} */
