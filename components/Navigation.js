@@ -43,7 +43,7 @@ const Navigation = function ({ total }) {
       </Link>
       <span>0{id}/0{total}</span>
       <Link href={nextUrl}>
-      <a className="righarrow">
+      <a className="rightarrow">
           <Image
           width="12px"
           height="12px"
