@@ -1,27 +1,32 @@
-import { useRouter } from 'next/router'
-import Head from 'next/head'
+import { useRouter } from "next/router";
+import Head from "next/head";
 
-import { web3, contract, contractAddress } from '../lib/web3'
+import { web3, contract, contractAddress } from "../lib/web3";
 
-import { useState } from 'react'
+import { useState } from "react";
 
-import Navigation from '../components/Navigation'
-import Universe from '../components/Universe'
-import EthName from '../components/EthName'
-import Modal from '../components/Modal'
+import Navigation from "../components/Navigation";
+import Universe from "../components/Universe";
+import EthName from "../components/EthName";
+import Modal from "../components/Modal";
 
 function Floob({ metadata, opensea }) {
-  const router = useRouter()
-  let { id } = router.query
-  id = parseInt(id)
+  const router = useRouter();
+  let { id } = router.query;
+  id = parseInt(id);
 
   if (typeof document === "object") {
-    document.documentElement.style.setProperty("--main-color", metadata.properties.mainColor)
+    document.documentElement.style.setProperty(
+      "--main-color",
+      metadata.properties.mainColor
+    );
   }
 
   let forSaleNotice = (
-    <p className="left-p">↳ Currenty for sale on OpenSea for 0.2 ETH by 0x784ef8…b848</p>
-  )
+    <p className="left-p">
+      ↳ Currenty for sale on OpenSea for 0.2 ETH by 0x784ef8…b848
+    </p>
+  );
 
   // let forSaleNotice = (
   //   <p>↳ Not for sale</p>
@@ -36,78 +41,80 @@ function Floob({ metadata, opensea }) {
   //   )
   // }
 
-  let openSeaLink = `https://testnets.opensea.io/assets/${contractAddress}/${id}`
+  let openSeaLink = `https://testnets.opensea.io/assets/${contractAddress}/${id}`;
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-  const toggleModal  = () => {
-    setShowModal((showModal) => !showModal) 
-  }
+  const toggleModal = () => {
+    setShowModal((showModal) => !showModal);
+  };
 
   return (
     <>
-        <Universe id={id} metadata={metadata} />
+      <Universe id={id} metadata={metadata} />
 
-        <div className="mob-wrap">
-          <Navigation id={id} total={5} />
+      <div className="mob-wrap">
+        <Navigation id={id} total={5} />
 
-          <section className="right">
-              <a href={openSeaLink} target="_blank" rel="noreferrer" className="button"> 
-                View on OpenSea
-              </a>
-              <a href={"#"} onClick={toggleModal} className="button-left">
-                ?
-              </a>
-          </section>
-        
-          <section className="left">
-            <h2>Floob #{id}</h2>
+        <section className="right">
+          <a
+            href={openSeaLink}
+            target="_blank"
+            rel="noreferrer"
+            className="button"
+          >
+            View on OpenSea
+          </a>
+          <a href={"#"} onClick={toggleModal} className="button-left">
+            ?
+          </a>
+        </section>
 
-            {forSaleNotice}
+        <section className="left">
+          <h2>Floob #{id}</h2>
+          {forSaleNotice}
+        </section>
+      </div>
 
-          </section>
+      {showModal && <Modal toggleModal={toggleModal} />}
 
-        </div>
-
-        { showModal && <Modal toggleModal={toggleModal}/> }
-
-        <Head>
-          <title>Floobz – Floob #{id}</title>
-        </Head>
+      <Head>
+        <title>Floobz – Floob #{id}</title>
+      </Head>
     </>
-  )
+  );
 }
 
 export async function getStaticPaths() {
-  const paths = [1, 2, 3, 4, 5].map(id => {
-    return { params: { id: id.toString() }}
-  })
+  const paths = [1, 2, 3, 4, 5].map((id) => {
+    return { params: { id: id.toString() } };
+  });
 
   return {
     paths: paths,
-    fallback: true
-  } 
+    fallback: true,
+  };
 }
 
 export async function getStaticProps({ params }) {
+  let token = await contract.methods.tokenURI(params.id).call();
 
-  let token = await contract.methods.tokenURI(params.id).call()
+  let metadataResponse = await fetch(token);
+  let metadata = await metadataResponse.json();
 
-  let metadataResponse = await fetch(token)
-  let metadata = await metadataResponse.json()
+  let openseaResponse = await fetch(
+    `https://rinkeby-api.opensea.io/api/v1/asset/${contractAddress}/${params.id}`
+  );
+  let opensea = await openseaResponse.json();
 
-  let openseaResponse = await fetch(`https://rinkeby-api.opensea.io/api/v1/asset/${contractAddress}/${params.id}`)
-  let opensea = await openseaResponse.json()
-
-  console.log(opensea)
-
+  console.log(opensea);
 
   return {
     props: {
       metadata: metadata,
-      opensea: opensea
-    }
-  }
+      opensea: opensea,
+    },
+  };
 }
 
-export default Floob
+export default Floob;
